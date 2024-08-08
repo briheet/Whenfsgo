@@ -1,6 +1,9 @@
-run: build
-	@go run .
+.PHONY: all server client
 
-build: 
-	@go build .
+all: server client
 
+server: 
+	@go run server/server.go
+
+client: 
+	@go run client/client.go
